@@ -67,78 +67,88 @@ h2 {
 }
 
 /* Section styling */
-.company-info, .employee-profiles, .contact-form {
+.trips-info, .trips-table, .trip-description {
   margin-bottom: 3rem;
 }
 
-.company-info h3, .employee-profiles h3, .contact-form h3 {
+.trips-info h3, .trips-table h3, .trip-description h3 {
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
   color: #004466;
 }
 
-/* Map styling */
-.map-container iframe {
-  max-width: 100%;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+/* 2-column grid layout for trip description */
+.trip-description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 2rem;
 }
 
-/* Profile grid styling */
-.profile-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.profile-grid figure {
+.trip-description figure {
   text-align: center;
 }
 
-.profile-grid img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-/* Contact form styling */
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-label {
-  font-weight: 600;
-}
-
-input, textarea {
-  padding: 0.8rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.trip-description img {
   width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
-textarea {
-  resize: vertical;
+.trip-description figcaption {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #004466;
 }
 
-/* Button styling */
-button {
-  padding: 1rem 2rem;
+/* Trip table grid layout */
+.trips-table {
+  overflow-x: auto;
+  margin-top: 3rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+th {
   background-color: #004466;
   color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ffcc00;
+  color: #fff;
+}
+
+/* Call to action button */
+.call-to-action {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.call-to-action a {
+  background-color: #004466;
+  color: #fff;
+  padding: 1rem 3rem;
+  text-decoration: none;
   font-weight: bold;
-  border: none;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s;
 }
 
-button:hover {
+.call-to-action a:hover {
   background-color: #ffcc00;
 }
 
