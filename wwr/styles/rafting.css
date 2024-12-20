@@ -82,15 +82,26 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 2rem;
+  max-width: 100%; /* Ensure the container can stretch to available width */
 }
 
+/* Ensure images in trip description adjust */
+.trip-description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 2rem;
+  max-width: 100%; /* Ensure the container can stretch to available width */
+}
+
+/* Ensure images in trip description adjust */
 .trip-description figure {
   text-align: center;
 }
 
 .trip-description img {
-  width: 100%;
+  width: 80%; /* Adjust the width to be smaller */
   height: auto;
+  max-width: 150px; /* Set a max width to avoid oversized images */
   border-radius: 8px;
   object-fit: cover;
 }
@@ -176,4 +187,19 @@ footer .social-icon:hover {
 footer a {
   text-decoration: none;
   color: #ffcc00;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  /* For tablets and smaller devices, switch to 1-column layout */
+  .trip-description {
+    grid-template-columns: 1fr; /* 1 column on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile devices, make the text and images fit properly */
+  .trip-description img {
+    max-width: 100%;
+  }
 }
