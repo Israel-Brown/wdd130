@@ -59,147 +59,104 @@ main {
   margin: 0 auto;
 }
 
-h2 {
+/* Call to Action */
+.cta {
   text-align: center;
+  margin-bottom: 3rem; /* Adjust margin below the section */
+}
+
+.cta h2 {
   font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #004466;
+}
+
+.cta .btn {
+  display: inline-block; /* Ensures the button stays on its own line */
+  padding: 1rem 2rem;
+  background-color: #004466;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 1.5rem; /* Adjusts space above the button */
+}
+
+.cta .btn:hover {
+  background-color: #ffcc00;
+}
+
+/* 2-column grid for trip descriptions */
+.trip-descriptions h2 {
+  font-size: 2.5rem;
+  text-align: center;
   margin-bottom: 2rem;
   color: #004466;
 }
 
-/* Section styling */
-.trips-info, .trips-table, .trip-description {
-  margin-bottom: 3rem;
-}
-
-.trips-info h3, .trips-table h3, .trip-description h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1.2rem;
-  color: #004466;
-}
-
-/* 2-column grid layout for trip description */
-.trip-description {
+.trip-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  max-width: 100%; /* Ensure the container can stretch to available width */
 }
 
-/* Ensure images in trip description adjust */
-.trip-description {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 2rem;
-  max-width: 100%; /* Ensure the container can stretch to available width */
-}
-
-/* Ensure images in trip description adjust */
-.trip-description figure {
+.trip-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.trip-description img {
-  width: 80%; /* Adjust the width to be smaller */
+.trip-item img {
+  width: 100%;
   height: auto;
-  max-width: 150px; /* Set a max width to avoid oversized images */
+  max-width: 250px;
   border-radius: 8px;
   object-fit: cover;
 }
 
-.trip-description figcaption {
-  font-weight: bold;
+.trip-item h3 {
   margin-top: 1rem;
+  font-size: 1.8rem;
   color: #004466;
 }
 
-/* Trip table grid layout */
-.trips-table {
-  overflow-x: auto;
-  margin-top: 3rem;
+.trip-item p {
+  margin-top: 0.5rem;
+  color: #555;
 }
 
-table {
+/* Trip Table */
+.trip-table table {
   width: 100%;
+  margin-top: 2rem;
   border-collapse: collapse;
-  text-align: center;
 }
 
-th, td {
+.trip-table th, .trip-table td {
   padding: 1rem;
+  text-align: left;
   border: 1px solid #ddd;
 }
 
-th {
+.trip-table th {
   background-color: #004466;
   color: #fff;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #ffcc00;
-  color: #fff;
-}
-
-/* Call to action button */
-.call-to-action {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.call-to-action a {
-  background-color: #004466;
-  color: #fff;
-  padding: 1rem 3rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.call-to-action a:hover {
-  background-color: #ffcc00;
+.trip-table tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
 /* Footer styling */
 footer {
-  background-color: #004466;
+  background-color: #333;
   color: #fff;
-  padding: 2rem 0;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer .social-icon {
-  width: 30px;
-  height: 30px;
-  margin: 0 10px;
-}
-
-footer .social-icon:hover {
-  opacity: 0.7;
-}
-
-footer a {
-  text-decoration: none;
-  color: #ffcc00;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  /* For tablets and smaller devices, switch to 1-column layout */
-  .trip-description {
-    grid-template-columns: 1fr; /* 1 column on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  /* For mobile devices, make the text and images fit properly */
-  .trip-description img {
-    max-width: 100%;
-  }
+  padding: 1.5rem;
+  margin-top: 3rem;
 }
