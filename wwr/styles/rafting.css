@@ -52,36 +52,128 @@ header nav ul li a:hover {
   color: #ffcc00;
 }
 
-/* Hero Section */
-.hero {
+/* Hero Section for About Us */
+.hero-about {
+  background-image: url('images/hero.jpg'); /* Background image for About Us */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 50px;
+  height: 100vh;
   position: relative;
-  width: 100%;
-  height: 60vh;
-  overflow: hidden;
 }
 
-.hero-image {
+.hero-about .hero-content {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
+.hero-about .hero-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero-about h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-about p {
+  font-size: 1.2rem;
+}
+
+.hero-about .client-image-container {
+  flex: 1;
   text-align: center;
 }
 
-.hero-text h2 {
-  font-size: 3rem;
-  font-weight: bold;
+.hero-about .client-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-.hero-text p {
+/* Responsive Design for About Us */
+@media (max-width: 768px) {
+  .hero-about {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-about .hero-text {
+    margin-bottom: 20px;
+  }
+
+  .hero-about .client-image {
+    max-width: 80%;
+  }
+}
+
+/* Responsive Design for About Us */
+@media (max-width: 768px) {
+  .hero-about {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-about .hero-text {
+    margin-bottom: 20px;
+  }
+
+  .hero-about .client-image {
+    max-width: 80%;
+  }
+}
+
+/* Hero Section for Home */
+.hero-home {
+  position: relative;
+  background-color: #333; 
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-home .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6; /* Dim the background image */
+}
+
+.hero-home .hero-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-home h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-home p {
   font-size: 1.2rem;
+}
+
+/* Responsive Design for Home */
+@media (max-width: 768px) {
+  .hero-home h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-home p {
+    font-size: 1rem;
+  }
 }
 
 /* Main content styling */
@@ -293,20 +385,6 @@ footer p {
 /* General rule for images to make them responsive */
 img {
   max-width: 100%;
-  height: auto;
-}
-
-/* Specific rules for certain image classes */
-.hero-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.client-image {
-  width: 100%;
-  max-width: 500px;  /* Control the max size */
   height: auto;
 }
 
@@ -540,5 +618,58 @@ footer p {
 
   .adventure-gallery img {
     max-width: 100%;
+  }
+}
+/* History Section */
+.history {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures it adapts to smaller screen sizes */
+  gap: 20px; /* Adds spacing between the items */
+  margin: 40px 0; /* Adds some margin to the section */
+}
+
+.history h2 {
+  width: 100%; /* Ensures the heading takes up full width */
+  text-align: center; /* Centers the title */
+  margin-bottom: 20px;
+}
+
+.history-text-left,
+.history-text-right {
+  flex: 1; /* Makes each text block take up equal space */
+  padding: 20px; /* Adds padding to the text blocks */
+  box-sizing: border-box; /* Prevents padding from affecting width */
+  font-size: 1.2rem;
+}
+
+.history-image {
+  flex: 2; /* Makes the image block take up more space */
+  text-align: center; /* Centers the image */
+}
+
+.history-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: adds rounded corners to the image */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .history {
+    flex-direction: column; /* Stacks the elements vertically on smaller screens */
+    text-align: center;
+  }
+
+  .history-text-left,
+  .history-text-right {
+    flex: none; /* Removes the flex behavior on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .history-image {
+    flex: none; /* Removes the flex behavior on smaller screens */
+    margin-bottom: 20px;
   }
 }
