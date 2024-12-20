@@ -169,6 +169,13 @@ header nav ul li a:hover {
   transform: scale(1.05);
 }
 
+.employee-profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
 /* Footer */
 footer {
   background-color: #004466; /* Deep Blue */
