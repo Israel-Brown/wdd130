@@ -317,3 +317,23 @@ img {
   max-width: 300px;  /* Adjust to control the max size for these images */
   height: auto;
 }
+.employee-image {
+  width: 100%; /* Ensure they take full width of their container */
+  max-width: 300px; /* Maximum width to keep images from being too large */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Space between images */
+  display: block; /* Ensure they behave as block-level elements */
+  border-radius: 8px; /* Optional: adds rounded corners */
+}
+.history-layout {
+  display: grid; /* Use Grid to create columns */
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Space between columns */
+}
+
+.history-image {
+  width: 100%; /* Ensure images fill their grid cell */
+  max-width: 500px; /* Limit the size to avoid oversized images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: rounded corners */
+}
