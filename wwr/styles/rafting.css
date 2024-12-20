@@ -289,3 +289,31 @@ footer p {
     gap: 1rem; /* Add space between images */
   }
 }
+
+/* General rule for images to make them responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Specific rules for certain image classes */
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.client-image {
+  width: 100%;
+  max-width: 500px;  /* Control the max size */
+  height: auto;
+}
+
+.history img,
+.adventure-grid img,
+.profile-grid img {
+  width: 100%;
+  max-width: 300px;  /* Adjust to control the max size for these images */
+  height: auto;
+}
