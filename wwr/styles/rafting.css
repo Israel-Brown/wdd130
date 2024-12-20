@@ -54,16 +54,15 @@ header nav ul li a:hover {
 
 /* Hero Section for About Us */
 .hero-about {
-  background-image: url('images/hero.jpg'); /* Background image for About Us */
+  background-image: url('images/hero.jpg'); /* Ensure correct image path */
   background-size: cover;
   background-position: center;
+  height: 100vh; /* Ensure it covers the full viewport height */
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  color: white;
+  align-items: center;
   padding: 50px;
-  height: 100vh;
-  position: relative;
+  color: #333;
 }
 
 .hero-about .hero-content {
@@ -91,7 +90,7 @@ header nav ul li a:hover {
   text-align: center;
 }
 
-.hero-about .client-image {
+.hero-about .hero {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
@@ -108,26 +107,11 @@ header nav ul li a:hover {
     margin-bottom: 20px;
   }
 
-  .hero-about .client-image {
+  .hero-about .hero {
     max-width: 80%;
   }
 }
 
-/* Responsive Design for About Us */
-@media (max-width: 768px) {
-  .hero-about {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .hero-about .hero-text {
-    margin-bottom: 20px;
-  }
-
-  .hero-about .client-image {
-    max-width: 80%;
-  }
-}
 
 /* Hero Section for Home */
 .hero-home {
