@@ -325,15 +325,220 @@ img {
   display: block; /* Ensure they behave as block-level elements */
   border-radius: 8px; /* Optional: adds rounded corners */
 }
-.history-layout {
-  display: grid; /* Use Grid to create columns */
-  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-  gap: 20px; /* Space between columns */
+/* Reset some basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.history-image {
-  width: 100%; /* Ensure images fill their grid cell */
-  max-width: 500px; /* Limit the size to avoid oversized images */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: rounded corners */
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #004466;
+  color: #fff;
+}
+
+header .header-logo img {
+  width: 120px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-left: 2rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* History Section Styling */
+.history {
+  padding: 3rem 2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.history h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #004466;
+  width: 100%;
+  text-align: center;
+}
+
+.history .history-text-left,
+.history .history-text-right {
+  width: 45%;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.history .history-text-left {
+  text-align: left;
+}
+
+.history .history-text-right {
+  text-align: right;
+}
+
+.history img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Styling for text blocks (left and right) */
+.history .history-text-left,
+.history .history-text-right {
+  margin-top: 1rem;
+}
+
+.history figure {
+  margin-top: 2rem;
+}
+
+.history figcaption {
+  margin-top: 1rem;
+  color: #777;
+  font-size: 1.2rem;
+}
+
+/* Ensuring proper layout on smaller screens */
+@media (max-width: 768px) {
+  .history {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .history .history-text-left,
+  .history .history-text-right {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Adventures Section Styling */
+.adventures {
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.adventures h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #004466;
+}
+
+.adventure-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
+
+.adventure-gallery figure {
+  text-align: center;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.adventure-gallery figcaption {
+  margin-top: 1rem;
+  color: #004466;
+  font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+footer .footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .footer-social a img {
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+footer .footer-social a img:hover {
+  transform: scale(1.1);
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 {
+    margin-left: 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .adventure-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .adventure-gallery img {
+    max-width: 100%;
+  }
 }
