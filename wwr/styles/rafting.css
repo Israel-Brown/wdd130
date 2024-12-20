@@ -1,9 +1,11 @@
+/* Reset some basic styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -11,6 +13,7 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Header styling */
 header {
   display: flex;
   justify-content: space-between;
@@ -49,6 +52,7 @@ header nav ul li a:hover {
   color: #ffcc00;
 }
 
+/* Main content styling */
 main {
   padding: 3rem 2rem;
   max-width: 1200px;
@@ -62,6 +66,7 @@ h2 {
   color: #004466;
 }
 
+/* Section styling */
 .company-info, .employee-profiles, .contact-form {
   margin-bottom: 3rem;
 }
@@ -72,12 +77,14 @@ h2 {
   color: #004466;
 }
 
+/* Map styling */
 .map-container iframe {
   max-width: 100%;
   border-radius: 10px;
   border: 1px solid #ddd;
 }
 
+/* Profile grid styling */
 .profile-grid {
   display: flex;
   justify-content: space-between;
@@ -96,6 +103,7 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* Contact form styling */
 .contact-form form {
   display: flex;
   flex-direction: column;
@@ -118,6 +126,7 @@ textarea {
   resize: vertical;
 }
 
+/* Button styling */
 button {
   padding: 1rem 2rem;
   background-color: #004466;
@@ -133,6 +142,7 @@ button:hover {
   background-color: #ffcc00;
 }
 
+/* Footer styling */
 footer {
   background-color: #004466;
   color: #fff;
